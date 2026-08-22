@@ -23,8 +23,8 @@ llm_clients:
     base_url: "http://localhost:8001/v1"
     api_key: "local"
     vllm:
-      model: "Tooony133/Qwen-3.6-27B-SkinnyPete"
-      revision: "2d811e9cb9a74f311682cdcb68aa2404da6974a0"
+      model: "Gael1125/Qwen3.6-3"
+      revision: "6176fd521e618606629294c93faa885e721e9dc9"
       gpu_ids: "0,1,2"
       tensor_parallel_size: 1
       data_parallel_size: 3
@@ -55,7 +55,7 @@ embedder:
 actors:
   planner:
     client: "coder-instance"
-    model: "Tooony133/Qwen-3.6-27B-SkinnyPete"
+    model: "Gael1125/Qwen3.6-3"
     workers: 256
     queue_size: 128
     max_tokens: 32768
@@ -73,7 +73,7 @@ actors:
       allow_fallbacks: true
   coder:
     client: "coder-instance"
-    model: "Tooony133/Qwen-3.6-27B-SkinnyPete"
+    model: "Gael1125/Qwen3.6-3"
     workers: 256
     queue_size: 128
     max_tokens: 24576
